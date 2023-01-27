@@ -12,131 +12,39 @@
     </div>
   </div>
 </section>
+
 <app-slider></app-slider>
-<!-- <section class="slider">
-    <div class="slider__container">
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide slide">
-            <a class="slide__image" href="product.html">
-              <img src="../img/home/slider/table.svg" alt="slider-table" />
-            </a>
-            <div class="slide__title">Столы</div>
-          </div>
-          <div class="swiper-slide slide">
-            <a class="slide__image">
-              <img src="../img/home/slider/divan.svg" alt="slider-divan" />
-            </a>
-            <div class="slide__title">Диваны</div>
-          </div>
-          <div class="swiper-slide slide">
-            <a class="slide__image">
-              <img src="../img/home/slider/bed.svg" alt="slider-table" />
-            </a>
-            <div class="slide__title">Кровати</div>
-          </div>
-          <div class="swiper-slide slide">
-            <a class="slide__image">
-              <img src="../img/home/slider/lamp.svg" alt="slider-table" />
-            </a>
-            <div class="slide__title">Освещение</div>
-          </div>
-          <div class="swiper-slide slide">
-            <a class="slide__image">
-              <img src="../img/home/slider/carpet.svg" alt="slider-table" />
-            </a>
-            <div class="slide__title">Текстиль</div>
-          </div>
-          <div class="swiper-slide slide">
-            <a class="slide__image">
-              <img src="../img/home/slider/plant.svg" alt="slider-table" />
-            </a>
-            <div class="slide__title">Декорации</div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-  </section> -->
+
 <section class="products">
   <div class="products__container">
     <div class="products__title">Хиты продаж</div>
     <div class="products__wrapper">
-      <div class="product">
-        <a href="product.html" class="product__image">
-          <img src="../assets/img/home/products/1.png" alt="product-image" />
+      <div class="product" *ngFor="let product of products">
+        <a class="product__image">
+          <img [src]="product.img" alt="product-image" />
         </a>
-        <div class="product__title">Кресло Барселона</div>
-        <div class="product__price">$6738</div>
+        <div class="product__title">{{ product.title }}</div>
+        <div class="product__price">${{ product.price }}</div>
         <div class="product__actions">
-          <button class="product__cart btn">В корзину</button>
-          <button class="product__favorite fav">
-            <span class="material-icons-outlined"> favorite_border </span>
+          <button
+            mat-raised-button
+            class="product__cart"
+            (click)="onCart(product)"
+            *ngIf="!product.inCart; else addedToCart"
+          >
+            В корзину
+            <span class="material-icons-outlined"> add </span>
           </button>
-        </div>
-      </div>
-      <div class="product">
-        <a href="product.html" class="product__image">
-          <img src="../assets/img/home/products/2.png" alt="product-image" />
-        </a>
-        <div class="product__title">Кресло Барселона</div>
-        <div class="product__price">$6738</div>
-        <div class="product__actions">
-          <button class="product__cart btn">В корзину</button>
-          <button class="product__favorite fav">
-            <span class="material-icons-outlined"> favorite_border </span>
-          </button>
-        </div>
-      </div>
-      <div class="product">
-        <a href="product.html" class="product__image">
-          <img src="../assets/img/home/products/3.png" alt="product-image" />
-        </a>
-        <div class="product__title">Кресло Барселона</div>
-        <div class="product__price">$6738</div>
-        <div class="product__actions">
-          <button class="product__cart btn">В корзину</button>
-          <button class="product__favorite fav">
-            <span class="material-icons-outlined"> favorite_border </span>
-          </button>
-        </div>
-      </div>
-      <div class="product">
-        <a href="product.html" class="product__image">
-          <img src="../assets/img/home/products/4.png" alt="product-image" />
-        </a>
-        <div class="product__title">Кресло Барселона</div>
-        <div class="product__price">$6738</div>
-        <div class="product__actions">
-          <button class="product__cart btn">В корзину</button>
-          <button class="product__favorite fav">
-            <span class="material-icons-outlined"> favorite_border </span>
-          </button>
-        </div>
-      </div>
-      <div class="product">
-        <a href="product.html" class="product__image">
-          <img src="../assets/img/home/products/5.png" alt="product-image" />
-        </a>
-        <div class="product__title">Кресло Барселона</div>
-        <div class="product__price">$6738</div>
-        <div class="product__actions">
-          <button class="product__cart btn">В корзину</button>
-          <button class="product__favorite fav">
-            <span class="material-icons-outlined"> favorite_border </span>
-          </button>
-        </div>
-      </div>
-      <div class="product">
-        <a href="product.html" class="product__image">
-          <img src="../assets/img/home/products/6.png" alt="product-image" />
-        </a>
-        <div class="product__title">Кресло Барселона</div>
-        <div class="product__price">$6738</div>
-        <div class="product__actions">
-          <button class="product__cart btn">В корзину</button>
-          <button class="product__favorite fav">
+          <ng-template #addedToCart>
+            <button
+            [disabled]="product.inCart"
+              mat-stroked-button
+              (click)="onCart(product)"
+            >
+              Добавлено
+            </button>
+          </ng-template>
+          <button mat-icon-button class="product__favorite fav">
             <span class="material-icons-outlined"> favorite_border </span>
           </button>
         </div>

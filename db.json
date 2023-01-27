@@ -1,0 +1,54 @@
+{
+  "collections": [],
+
+  "products": [
+    {
+      "id": 0,
+      "title": "some title 1",
+      "inCart": false,
+      "inFav": false,
+      "img": "../assets/img/home/products/1.png",
+      "price": 6000
+    },
+    {
+      "id": 1,
+      "title": "some title 2",
+      "inCart": true,
+      "inFav": false,
+      "img": "../assets/img/home/products/2.png",
+      "price": 6000
+    },
+    {
+      "id": 2,
+      "title": "some title 1",
+      "inCart": false,
+      "inFav": false,
+      "img": "../assets/img/home/products/3.png",
+      "price": 6000
+    },
+    {
+      "id": 3,
+      "title": "some title 1",
+      "inCart": false,
+      "inFav": false,
+      "img": "../assets/img/home/products/4.png",
+      "price": 6000
+    },
+    {
+      "id": 4,
+      "title": "some title 5",
+      "inCart": false,
+      "inFav": false,
+      "img": "../assets/img/home/products/5.png",
+      "price": 6000
+    },
+    {
+      "id": 5,
+      "title": "some title 6",
+      "inCart": false,
+      "inFav": false,
+      "img": "../assets/img/home/products/6.png",
+      "price": 6000
+    }
+  ]
+}

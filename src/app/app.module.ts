@@ -13,6 +13,8 @@ import { HomeComponent } from './components/home/home.component';
 import { CartComponent } from './components/cart/cart.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { SwiperModule } from 'swiper/angular';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { SwiperModule } from 'swiper/angular';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    SwiperModule
+    SwiperModule,
+    MatGridListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
