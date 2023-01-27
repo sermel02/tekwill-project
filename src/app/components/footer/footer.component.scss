@@ -1,0 +1,44 @@
+.footer {
+  background-color: #b3a094;
+  padding: 40px 0 70px;
+  color: #fff;
+
+  &__container {
+    display: flex;
+    gap: 400px;
+  }
+
+  &__links {
+    display: flex;
+    gap: 120px;
+  }
+  .block {
+    &__title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+    &__item {
+      margin-bottom: 15px;
+    }
+    &__link {
+      font-weight: 400;
+      color: #ffffff;
+    }
+  }
+  .social {
+    &__title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+    &__links {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}

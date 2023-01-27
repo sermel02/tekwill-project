@@ -1,0 +1,50 @@
+<swiper
+  [speed]="900"
+  [grabCursor]="true"
+  [loop]="true"
+  [autoplay]="true"
+  [slidesPerView]="6"
+  [spaceBetween]="10"
+  [navigation]="true"
+  [scrollbar]="{ draggable: true }"
+  class="swiper__container"
+>
+  <ng-template swiperSlide class="swiper-slide slide">
+    <a class="slide__image" href="product.html">
+      <img src="../assets/img/home/slider/table.svg" alt="slider-table" />
+    </a>
+    <div class="slide__title">Столы</div>
+  </ng-template>
+  <ng-template swiperSlide class="swiper-slide slide">
+    <a class="slide__image">
+      <img src="../assets/img/home/slider/divan.svg" alt="slider-divan" />
+    </a>
+    <div class="slide__title">Диваны</div>
+  </ng-template>
+  <ng-template swiperSlide class="swiper-slide slide">
+    <a class="slide__image">
+      <img src="../assets/img/home/slider/bed.svg" alt="slider-table" />
+    </a>
+    <div class="slide__title">Кровати</div>
+  </ng-template>
+  <ng-template swiperSlide class="swiper-slide slide">
+    <a class="slide__image">
+      <img src="../assets/img/home/slider/lamp.svg" alt="slider-table" />
+    </a>
+    <div class="slide__title">Освещение</div>
+  </ng-template>
+  <ng-template swiperSlide class="swiper-slide slide">
+    <a class="slide__image">
+      <img src="../assets/img/home/slider/carpet.svg" alt="slider-table" />
+    </a>
+    <div class="slide__title">Текстиль</div>
+  </ng-template>
+  <ng-template swiperSlide class="swiper-slide slide">
+    <a class="slide__image">
+      <img src="../assets/img/home/slider/plant.svg" alt="slider-table" />
+    </a>
+    <div class="slide__title">Декорации</div>
+  </ng-template>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</swiper>
