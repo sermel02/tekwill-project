@@ -1,76 +1,65 @@
-
-  <section class="cart">
-    <div class="cart__container">
-      <div class="cart__title">Корзина</div>
-      <div class="cart__wrapper">
+<section class="cart">
+  <div class="cart__container">
+    <div class="cart__title">
+      <span>Корзина</span>
+      <button mat-button *ngIf="products.length" (click)="onClearCart()">Очистить корзину <span class="material-icons-outlined"> delete </span></button>
+    </div>
+    <div class="cart__wrapper">
+      <div *ngIf="!products.length; else cart" class="cart-empty">
+        <h1>Корзина пуста</h1>
+        <span class="material-icons-outlined"> shopping_cart </span>
+        <p>Перейти к покупкам - <a routerLink="/">каталог</a></p>
+      </div>
+      <ng-template #cart>
         <div class="cart__products">
-          <div class="product">
-            <button class="product__button">
+          <div class="product" *ngFor="let product of products">
+            <button class="product__button" (click)="onRemoveItem(product)">
               <span class="material-icons-outlined"> close </span>
             </button>
             <div class="product__image">
-              <img src="../assets/img/cart/1.png" alt="1" />
+              <img [src]="product.image" alt="1" />
             </div>
-            <div class="product__name">Кресло Барселона</div>
+            <div class="product__name">{{ product.title }}</div>
             <div class="product__count">
               <button class="minus">
                 <span class="material-icons-outlined"> remove </span>
               </button>
-              <input type="number" value="1" class="input" min="0">
+              <input type="number" value="1" class="input" min="0" />
               <button class="plus">
                 <span class="material-icons-outlined"> add </span>
               </button>
             </div>
-            <div class="product__price">$6738</div>
-          </div>
-          <div class="product">
-            <button class="product__button">
-              <span class="material-icons-outlined"> close </span>
-            </button>
-            <div class="product__image">
-              <img src="../assets/img/cart/1.png" alt="1" />
-            </div>
-            <div class="product__name">Кресло Барселона</div>
-            <div class="product__count">
-              <button class="minus">
-                <span class="material-icons-outlined"> remove </span>
-              </button>
-              <input type="number" value="1"  class="input" min="0">
-              <button class="plus">
-                <span class="material-icons-outlined"> add </span>
-              </button>
-            </div>
-            <div class="product__price">$6738</div>
+            <div class="product__price">${{ product.price }}</div>
           </div>
         </div>
-        <div class="cart__order">
-          <div class="review">
-            <div class="review__title">Обзор заказа</div>
-            <div class="review__block">
-              <span>Цена заказа:</span>
-              <span>$6838</span>
-            </div>
-            <div class="review__block">
-              <span>Промокод: </span>
-              <span>-$100</span>
-            </div>
-            <div class="review__block">
-              <span>Итого к оплате:</span>
-              <span>$6738</span>
-            </div>
-            <a class="review__button btn">Оформить заказ</a>
+      </ng-template>
+      <div class="cart__order">
+        <div class="review">
+          <div class="review__title">Обзор заказа</div>
+          <div class="review__block">
+            <span>Цена заказа:</span>
+            <span>${{ grandTotal }}</span>
           </div>
-          <div class="promo">
-            <div class="promo__title">Промокод</div>
-            <div class="promo__main">
-              <div class="promo__input">
-                <input type="text" placeholder="Введите промокод"/>
-              </div>
-              <button class="promo__button btn">Потвердить</button>
+          <div class="review__block">
+            <span>Промокод: </span>
+            <span>-$100</span>
+          </div>
+          <div class="review__block">
+            <span>Итого к оплате:</span>
+            <span>$6738</span>
+          </div>
+          <a class="review__button btn">Оформить заказ</a>
+        </div>
+        <div class="promo">
+          <div class="promo__title">Промокод</div>
+          <div class="promo__main">
+            <div class="promo__input">
+              <input type="text" placeholder="Введите промокод" />
             </div>
+            <button class="promo__button btn">Потвердить</button>
           </div>
         </div>
       </div>
     </div>
-  </section>
-
+  </div>
+</section>

@@ -1,3 +1,5 @@
+import { CartService } from './../../services/cart.service';
+import { ApiService } from './../../services/api.service';
 import { Product } from './../../shared/product';
 import { ProductsService } from './../../services/products.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
@@ -8,28 +10,24 @@ import { Subscription } from 'rxjs';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit {
 
-  products: Product[] = [];
-  productsSubscribtion?: Subscription;
+  public productList: any = [];
 
-  constructor(private productService: ProductsService) { }
+  constructor(private api: ApiService, private cartService: CartService) { }
 
   ngOnInit(): void {
-    this.productsSubscribtion = this.productService.getProducts().subscribe(data => {
-      this.products = data;
-    });
-    console.log(this.products);
+    this.api.getProduct().
+      subscribe(data => {
+        this.productList = data;
+
+        this.productList.forEach((a: any) => {
+          Object.assign(a, {quantity: 1, total: a.price})
+        });
+      });
   }
 
-  onCart(product: Product) {
-    this.products[product.id].inCart = !this.products[product.id].inCart
-  }
-
-
-  ngOnDestroy(): void {
-    if (this.productsSubscribtion) {
-      this.productsSubscribtion.unsubscribe();
-    };
+  onAddToCart(product: any) {
+    this.cartService.addToCart(product)
   }
 }

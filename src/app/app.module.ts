@@ -15,7 +15,8 @@ import { SliderComponent } from './components/slider/slider.component';
 import { SwiperModule } from 'swiper/angular';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
-
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     HomeComponent,
     CartComponent,
-    SliderComponent
+    SliderComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +36,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     SwiperModule,
     MatGridListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatBadgeModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
