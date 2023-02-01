@@ -1,0 +1,71 @@
+<div *ngIf="product$ | async as productObj; else empty">
+  <section class="product">
+    <div class="product__container">
+      <div class="product__path">
+        <a href="home.html">Товары</a>/<a href="#">Мебель</a>/<a href="#"
+          >Кресла</a
+        >/<a href="#">Кресло Барселона</a>
+      </div>
+      <div class="product__wrapper">
+        <!-- <div class="product__slider swiper mySwiper2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+          </div>
+          <div class="swiper-button-next next">
+            <span class="material-icons-outlined"> arrow_forward_ios </span>
+          </div>
+          <div class="swiper-button-prev prev">
+            <span class="material-icons-outlined"> arrow_back_ios </span>
+          </div>
+        </div> -->
+        <div class="product__image">
+          <img [src]="productObj.image" alt="" />
+        </div>
+        <div class="product__info">
+          <div class="product__title">{{ productObj.title }}</div>
+          <div class="product__subtitle">Ludwig Mies van der Rohe 1929</div>
+          <div class="product__description">
+            Кресло Barcelona, ​​один из самых узнаваемых предметов прошлого века
+            и икона современного движения, излучает простую элегантность,
+            олицетворяющую самый известный принцип Мис ван дер Роэ: «меньше
+            значит больше». <a href="#">Еще</a>
+          </div>
+          <div class="product__colors">
+            <div>Выберите цвет:</div>
+            <div class="colors-wrapper">
+              <div class="color active"></div>
+              <div class="color"></div>
+              <div class="color"></div>
+              <div class="color"></div>
+            </div>
+          </div>
+          <div class="product__price">
+            <span>$6738</span>
+            <div class="counter">
+              <button class="minus">
+                <span class="material-icons-outlined"> remove </span>
+              </button>
+              <input type="number" />
+              <button class="plus">
+                <span class="material-icons-outlined"> add </span>
+              </button>
+            </div>
+          </div>
+          <div class="product__delivery">
+            Бесплатная доставка в <a href="#">Москву</a>
+          </div>
+          <div class="product__actions">
+            <button class="product__cart btn" (click)="onAddToCart(productObj)">Добавить в корзину</button>
+            <button class="product__favorite fav">
+              <span class="material-icons-outlined"> favorite_border </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<ng-template #empty>
+  <h3>Loading ...</h3>
+</ng-template>

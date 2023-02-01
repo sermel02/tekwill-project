@@ -17,6 +17,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     HomeComponent,
     CartComponent,
     SliderComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     BrowserModule,
