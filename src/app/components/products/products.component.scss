@@ -1,0 +1,19 @@
+.products {
+  // .products__container
+  &__container {
+  }
+  // .products__wrapper
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    .product {
+      flex: 1 25%;
+      max-width: 300px;
+
+      img {
+        height: 200px;
+      }
+    }
+  }
+}

@@ -18,6 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import {MatCardModule} from '@angular/material/card';
+import { ProductsComponent } from './components/products/products.component';
 
 
 @NgModule({
@@ -29,6 +32,8 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     CartComponent,
     SliderComponent,
     ProductDetailsComponent,
+    CategoriesComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,8 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     MatGridListModule,
     HttpClientModule,
     MatBadgeModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

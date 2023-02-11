@@ -1,0 +1,11 @@
+<div class="categories">
+  <div class="categories__container">
+    <h1 class="title">Категории</h1>
+    <div class="categories__wrapper">
+      <mat-card class="card" *ngFor="let category of categories" [routerLink]="'/categories/'.concat(category.category)">
+        <img [src]="category.image" alt="" class="card-image" />
+        <span class="card-title">{{ category.category }}</span>
+    </mat-card>
+    </div>
+  </div>
+</div>
