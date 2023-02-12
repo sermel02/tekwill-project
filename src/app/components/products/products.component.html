@@ -1,11 +1,31 @@
-<div class="products">
+<section class="products">
   <div class="products__container">
+    <div class="products__title">Хиты продаж</div>
     <div class="products__wrapper">
-      <div class="product" *ngFor="let product of products">
-        <img [src]="product.image" alt="" />
-        <h1>{{ product.title }}</h1>
-        <p>{{ product.description }}</p>
-      </div>
+      <mat-card *ngFor="let product of products" class="product">
+        <a class="product__image" [routerLink]="'/categories/'.concat(product.category).concat('/').concat(product.id)">
+          <img [src]="product.image" alt="product-image" />
+        </a>
+        <div class="product__title">{{ product.title }}</div>
+        <div class="product__price">${{ product.price }}</div>
+        <div class="product__actions">
+          <button
+            mat-raised-button
+            class="product__cart"
+          >
+            В корзину
+            <span class="material-icons-outlined"> add </span>
+          </button>
+          <ng-template #addedToCart>
+            <button [disabled]="product.inCart" mat-stroked-button>
+              Добавлено
+            </button>
+          </ng-template>
+          <button mat-icon-button class="product__favorite fav">
+            <span class="material-icons-outlined"> favorite_border </span>
+          </button>
+        </div>
+      </mat-card>
     </div>
   </div>
-</div>
+</section>

@@ -19,14 +19,18 @@
   <div class="products__container">
     <div class="products__title">Хиты продаж</div>
     <div class="products__wrapper">
-      <div class="product" *ngFor="let product of productList">
-        <a class="product__image" [routerLink]="['products/' + product?.id]">
+      <mat-card *ngFor="let product of productList" class="product">
+        <a class="product__image" [routerLink]="'/categories/'.concat(product.category)+'/'.concat(product.id)">
           <img [src]="product.image" alt="product-image" />
         </a>
         <div class="product__title">{{ product.title }}</div>
         <div class="product__price">${{ product.price }}</div>
         <div class="product__actions">
-          <button mat-raised-button class="product__cart" (click)="onAddToCart(product)">
+          <button
+            mat-raised-button
+            class="product__cart"
+            (click)="onAddToCart(product)"
+          >
             В корзину
             <span class="material-icons-outlined"> add </span>
           </button>
@@ -39,7 +43,7 @@
             <span class="material-icons-outlined"> favorite_border </span>
           </button>
         </div>
-      </div>
+      </mat-card>
     </div>
   </div>
 </section>

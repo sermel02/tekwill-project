@@ -16,11 +16,7 @@ export class ProductsService {
     return this.http.get<Product[]>(this.urlProducts)
   }
 
-  getProduct(productSlug: any) {
-    return productSlug.pipe(
-      switchMap((slug) => {
-        return this.http.get(`${this.urlProducts}/${slug}`)
-      })
-    )
+  getProduct(id: any) {
+    return this.http.get(`${this.urlProducts}/${id}`)
   }
 }

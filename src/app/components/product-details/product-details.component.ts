@@ -12,13 +12,14 @@ import { map, Observable } from 'rxjs';
 export class ProductDetailsComponent implements OnInit {
 
   product$!: Observable<any>;
+  productId$: string = '';
 
   constructor(private route: ActivatedRoute, private productService: ProductsService, private cartService: CartService) { }
 
   ngOnInit(): void {
-    const productId$ = this.route.params.pipe(map((params: any) => params?.["id"]));
-    this.product$ = this.productService.getProduct(productId$);
-    console.log(this.product$);
+    this.route.url.subscribe(value => this.productId$ = value[2].path);
+    // const productId$ = this.route.params.pipe(map((params: any) => params?.["id"]));
+    this.product$ = this.productService.getProduct(this.productId$);
   }
 
   onAddToCart(product: any) {
