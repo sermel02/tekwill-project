@@ -205,64 +205,80 @@
   }
 }
 
-#testimonials {
-  width: 100%;
-  padding: 70px 0;
-}
-.title-text {
-  text-align: center;
-  padding-bottom: 75px;
-}
-.title-text h4 {
-  font-size: 20px;
-  color: #db9969;
-}
-.title-text h1 {
-  font-size: 40px;
-}
-.testimonials {
-  width: 1100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: auto;
-}
-.testimonials .testi-box {
-  width: 320px;
-  height: 380px;
-  background: #db9969;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  transition: 0.8s;
-}
-.testimonials .testi-box .content {
-  padding: 30px;
-  text-align: center;
-}
-.testimonials .testi-box .content .quote {
-  width: 50px;
-}
-.testimonials .testi-box .content p {
-  padding: 20px 0;
-  text-align: justify;
-  font-weight: 500;
-}
-.user {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px 0;
-}
-.info h4 {
-  font-size: 20px;
-}
-.user img {
-  margin-right: 20px;
-  border-radius: 20px;
-}
-.testimonials .testi-box:hover {
-  transform: translateY(-8px);
+.reviews {
+  padding: 50px 0;
+  color: #fff;
+  // .reviews__container
+  &__container {
+  }
+  // .reviews__title
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+    h1 {
+      font-size: 40px;
+      color: #000;
+    }
+
+    h4 {
+      color: var(--accent-color);
+      font-size: 20px;
+    }
+  }
+  // .reviews__wrapper
+  &__wrapper {
+    display: flex;
+    gap: 40px;
+  }
+
+  .block {
+    flex: 1 1;
+    background: var(--accent-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.8s;
+    // .block__icon
+    &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        font-size: 40px;
+        color: #000;
+      }
+    }
+    // .block__info
+    &__info {
+      margin: 20px 0;
+      text-align: justify;
+      font-weight: 500;
+    }
+    // .block__person
+    &__person {
+    }
+  }
+  .person {
+    display: flex;
+    justify-content: space-between;
+    // .person__image
+    &__image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f1f1f1;
+      padding: 20px;
+      width: 150px;
+      border-radius: 10px;
+
+      span {
+        font-size: 40px;
+        color: #000;
+      }
+    }
+    // .person__info
+    &__info {
+    }
+  }
 }

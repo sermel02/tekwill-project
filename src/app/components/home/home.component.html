@@ -20,7 +20,11 @@
     <div class="products__title">Хиты продаж</div>
     <div class="products__wrapper">
       <mat-card *ngFor="let product of productList" class="product">
-        <div [routerLink]="'/categories/'.concat(product.category)+'/'.concat(product.id)">
+        <div
+          [routerLink]="
+            '/categories/'.concat(product.category) + '/'.concat(product.id)
+          "
+        >
           <a class="product__image">
             <img [src]="product.image" alt="product-image" />
           </a>
@@ -60,47 +64,70 @@
     </div>
   </div>
 </section>
-<!-- <section id="testimonials">
-    <div class="title-text">
+<section class="reviews">
+  <div class="reviews__container">
+    <div class="reviews__title">
       <h4>Отзывы клиентов</h4>
       <h1>Что люди думают о нас</h1>
     </div>
-    <div class="testimonials">
-      <div class="testi-box">
-        <div class="content">
-          <img src="../assets/img/home/comments/quote.png" alt="" class="quote">
-          <p>Был определенный бюджет на мебель для спальни, и я очень довольна, что смогла приобрести в этом магазине мебель из Италии за такие деньги.</p>
-          <div class="user"><img src="../assets/img/home/comments/5a57571175536.jpg" alt="" style="width: 150px;">
-            <div class="info">
-              <h4>Ирина Велкина</h4>
-              <i>@IrinaVelkina</i>
-            </div>
+
+    <div class="reviews__wrapper">
+      <div class="block">
+        <div class="block__icon">
+          <span class="material-icons"> format_quote </span>
+        </div>
+        <div class="block__info">
+          Был определенный бюджет на мебель для спальни, и я очень довольна, что
+          смогла приобрести в этом магазине мебель из Италии за такие деньги.
+        </div>
+        <div class="block__person person">
+          <div class="person__image">
+            <span class="material-icons-outlined"> person </span>
+          </div>
+          <div class="person__info">
+            <h2>Ирина Велкина</h2>
+            <i>@IrinaVelkina</i>
           </div>
         </div>
       </div>
-      <div class="testi-box">
-        <div class="content">
-          <img src="../assets/img/home/comments/quote.png" alt="" class="quote" >
-          <p>Искал антивандальный обеденный стол, который раскладывался и становился бы в два раза больше.В этом магазине нашел. </p>
-          <div class="user"><img src="/img/home/comments/д-7.jpg" alt="" style="width: 150px;height: 110px;">
-            <div class="info">
-              <h4>Борис Васильев</h4>
-              <i>@BorisVas</i>
-            </div>
+
+      <div class="block">
+        <div class="block__icon">
+          <span class="material-icons"> format_quote </span>
+        </div>
+        <div class="block__info">
+          Был определенный бюджет на мебель для спальни, и я очень довольна, что
+          смогла приобрести в этом магазине мебель из Италии за такие деньги.
+        </div>
+        <div class="block__person person">
+          <div class="person__image">
+            <span class="material-icons-outlined"> person </span>
+          </div>
+          <div class="person__info">
+            <h2>Ирина Велкина</h2>
+            <i>@IrinaVelkina</i>
           </div>
         </div>
       </div>
-      <div class="testi-box">
-        <div class="content">
-          <img src="/img/home/comments/quote.png" alt="" class="quote">
-          <p>Магазин, в котором есть что выбрать и купить, ассортимент большой.</p>
-            <div class="user"><img src="/img/home/comments/800647.jpg" alt="" style="width: 150px;">
-            <div class="info">
-              <h4>Евгений Альсо</h4>
-              <i>@EvgeniyAlso</i>
-            </div>
+
+      <div class="block">
+        <div class="block__icon">
+          <span class="material-icons"> format_quote </span>
+        </div>
+        <div class="block__info">
+          Был определенный бюджет на мебель для спальни, и я очень довольна, что
+          смогла приобрести в этом магазине мебель из Италии за такие деньги.
+        </div>
+        <div class="block__person person">
+          <div class="person__image">
+            <span class="material-icons-outlined"> person </span>
+          </div>
+          <div class="person__info">
+            <h2>Ирина Велкина</h2>
+            <i>@IrinaVelkina</i>
           </div>
         </div>
       </div>
     </div>
-  </section> -->
+  </div>
+</section>
