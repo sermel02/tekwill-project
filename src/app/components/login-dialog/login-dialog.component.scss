@@ -1,0 +1,60 @@
+.dialog {
+  padding-top: 20px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+
+  .icon {
+    span {
+      color: var(--accent-color);
+      font-size: 60px;
+    }
+  }
+
+  .title {
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    width: 100%;
+  }
+
+  .block {
+    position: relative;
+
+    input {
+      width: 100%;
+      height: 100%;
+
+      background: #fcfcfc;
+      border: 1px solid #ebebeb;
+      border-radius: 5px;
+      padding: 13px 0 13px 41px;
+    }
+
+    span {
+      position: absolute;
+      top: 13px;
+      left: 10px;
+      font-size: 18px;
+      color: #dadada;
+    }
+  }
+
+  .form-btn {
+    background-color: var(--accent-color);
+    color: #fff;
+  }
+}
