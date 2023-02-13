@@ -19,7 +19,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.api.getProduct().
       subscribe(data => {
-        this.productList = data;
+        this.productList = data.slice(0,3);
+
 
         this.productList.forEach((a: any) => {
           Object.assign(a, { quantity: 1, total: a.price })
