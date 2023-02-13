@@ -1,6 +1,6 @@
 <section class="products">
   <div class="products__container">
-    <div class="products__title">Хиты продаж</div>
+    <div class="products__title">{{path.toUpperCase()}}</div>
     <div class="products__wrapper">
       <mat-card *ngFor="let product of products" class="product">
         <a class="product__image" [routerLink]="'/categories/'.concat(product.category).concat('/').concat(product.id)">
@@ -12,6 +12,7 @@
           <button
             mat-raised-button
             class="product__cart"
+            (click)="onAddToCart(product)"
           >
             В корзину
             <span class="material-icons-outlined"> add </span>
@@ -21,9 +22,6 @@
               Добавлено
             </button>
           </ng-template>
-          <button mat-icon-button class="product__favorite fav">
-            <span class="material-icons-outlined"> favorite_border </span>
-          </button>
         </div>
       </mat-card>
     </div>

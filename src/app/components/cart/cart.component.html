@@ -8,7 +8,7 @@
       <div *ngIf="!products.length; else cart" class="cart-empty">
         <h1>Корзина пуста</h1>
         <span class="material-icons-outlined"> shopping_cart </span>
-        <p>Перейти к покупкам - <a routerLink="/">каталог</a></p>
+        <p>Перейти к покупкам - <a routerLink="/categories">каталог</a></p>
       </div>
       <ng-template #cart>
         <div class="cart__products">
@@ -48,7 +48,7 @@
             <span>Итого к оплате:</span>
             <span>$6738</span>
           </div>
-          <a class="review__button btn">Оформить заказ</a>
+          <button mat-button routerLink="/order" class="review__button btn">Оформить заказ</button>
         </div>
         <div class="promo">
           <div class="promo__title">Промокод</div>

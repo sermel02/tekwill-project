@@ -22,6 +22,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import {MatCardModule} from '@angular/material/card';
 import { ProductsComponent } from './components/products/products.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { OrderComponent } from './components/order/order.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { ContactComponent } from './components/contact/contact.component';
     CategoriesComponent,
     ProductsComponent,
     ContactComponent,
+    OrderComponent,
   ],
   imports: [
     BrowserModule,
