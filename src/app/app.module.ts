@@ -21,6 +21,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { CategoriesComponent } from './components/categories/categories.component';
 import {MatCardModule} from '@angular/material/card';
 import { ProductsComponent } from './components/products/products.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { ProductsComponent } from './components/products/products.component';
     ProductDetailsComponent,
     CategoriesComponent,
     ProductsComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,186 @@
+.contact {
+  padding: 50px 0;
+  // .contact__container
+  &__container {
+  }
+  // .contact__title
+  &__title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+  }
+  // .contact__text
+  &__text {
+    display: flex;
+    justify-content: center;
+    color: #888;
+  }
+  // .contact__wrapper
+  &__wrapper {
+    margin-top: 40px;
+    display: flex;
+    gap: 30px;
+
+    .card {
+      flex: 1 1;
+      align-items: center;
+      gap: 20px;
+      padding-top: 40px;
+      padding-bottom:40px;
+      display: flex;
+      box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
+
+      &__image {
+        span {
+          color: var(--accent-color);
+        }
+      }
+
+      &__title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #081828;
+        margin-bottom: 15px;
+      }
+      // .block__text
+      &__text {
+        color: #888;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.contact-form {
+  background-color: lightgray;
+  position: relative;
+  z-index: 2;
+  padding: 50px 0;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    height: 100%;
+    width: 60%;
+    z-index: -1;
+    background: var(--accent-color);
+  }
+  // .contact-form__container
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+  }
+  // .contact-form__form
+  &__form {
+    form {
+      padding: 50px;
+      background-color: #fff;
+      border-radius: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .form-group {
+        display: flex;
+        gap: 30px;
+      }
+
+      textarea {
+        width: 100% !important;
+        resize: none;
+        font-family: "Open Sans";
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .button {
+        padding: 10px;
+        border-radius: 7px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: var(--accent-color)
+      }
+
+      input,
+      textarea {
+        display: block;
+        line-height: 52px;
+        width: 250px;
+        border: 1px solid #e6e2f5;
+        padding: 0px 20px;
+        color: #333;
+        font-weight: 400;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+    }
+  }
+
+  .question {
+    color: #fff;
+    // .question__title
+    &__title {
+      font-size: 30px;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 10px;
+    }
+    // .question__call
+    &__call {
+      margin: 40px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .image {
+        span {
+          background-color: #fff;
+          padding: 10px;
+          font-size: 60px;
+          color: #888;
+          border-radius: 50%;
+        }
+      }
+
+      .phone {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        :first-child {
+          font-size: 13px;
+          text-transform: uppercase;
+        }
+        :last-child {
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+    }
+    // .question__schedule
+    &__schedule {
+      font-size: 18px;
+      p {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.contact-map {
+  &__full-container {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  iframe {
+    width: 100%;
+  }
+}
