@@ -207,7 +207,7 @@
 
 .reviews {
   padding: 50px 0;
-  color: #fff;
+  // color: #fff;
   // .reviews__container
   &__container {
   }
@@ -227,17 +227,19 @@
   }
   // .reviews__wrapper
   &__wrapper {
+    padding: 30px 0;
     display: flex;
     gap: 40px;
   }
 
   .block {
     flex: 1 1;
-    background: var(--accent-color);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
     transition: 0.8s;
+
+
     // .block__icon
     &__icon {
       display: flex;
@@ -246,17 +248,16 @@
 
       span {
         font-size: 40px;
-        color: #000;
+        color: var(--accent-color);
       }
     }
     // .block__info
     &__info {
       margin: 20px 0;
       text-align: justify;
-      font-weight: 500;
     }
-    // .block__person
-    &__person {
+    &:hover {
+      transform: translateY(-8px);
     }
   }
   .person {
