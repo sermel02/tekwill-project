@@ -14,9 +14,14 @@
 
   &__logo {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 30px;
     line-height: 28px;
     color: #000000;
+    font-weight: 700;
+
+    span {
+      color: var(--accent-color);
+    }
   }
 
   &__actions {

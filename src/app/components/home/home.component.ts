@@ -19,13 +19,16 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.api.getProduct().
       subscribe(data => {
-        this.productList = data.slice(0,3);
+        this.productList = data.slice(0, 3);
 
 
         this.productList.forEach((a: any) => {
           Object.assign(a, { quantity: 1, total: a.price })
         });
       });
+    setTimeout(() => {
+      alert('Этот сайт для проекта Tekwill Junior')
+    }, 1000)
   }
 
   onAddToCart(product: any) {

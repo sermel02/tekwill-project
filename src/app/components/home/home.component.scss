@@ -217,6 +217,7 @@
     margin-bottom: 30px;
     h1 {
       font-size: 40px;
+      font-weight: 700;
       color: #000;
     }
 
@@ -238,6 +239,9 @@
     border-radius: 10px;
     box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
     transition: 0.8s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 
     // .block__icon
@@ -263,23 +267,37 @@
   .person {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     // .person__image
     &__image {
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #f1f1f1;
-      padding: 20px;
       width: 150px;
-      border-radius: 10px;
+      height: 80px;
 
-      span {
-        font-size: 40px;
-        color: #000;
+      img {
+        border-radius: 20px;
+        object-fit: cover;
       }
     }
     // .person__info
     &__info {
     }
+  }
+}
+
+.video {
+  padding: 40px 0;
+  background-color: #eeceb7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    margin-bottom: 50px;
   }
 }

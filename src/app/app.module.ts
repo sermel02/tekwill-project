@@ -25,6 +25,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { OrderComponent } from './components/order/order.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { LoginDialogComponent } from './components/login-dialog/login-dialog.component';
+import { DeliveryComponent } from './components/delivery/delivery.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { LoginDialogComponent } from './components/login-dialog/login-dialog.com
     ContactComponent,
     OrderComponent,
     LoginDialogComponent,
+    DeliveryComponent,
   ],
   imports: [
     BrowserModule,

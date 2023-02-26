@@ -1,6 +1,6 @@
 <header class="header">
   <div class="header__container">
-    <a routerLink="home" class="header__logo">Logo</a>
+    <a routerLink="home" class="header__logo">Bed<span>Chair</span></a>
     <div class="header__menu menu">
       <nav class="menu__body">
         <ul class="menu__list">
@@ -8,13 +8,7 @@
             <a class="menu__link" routerLink="categories">Категории</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link">Мебель</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link">Доставка</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link">О нас</a>
+            <a class="menu__link" routerLink="delivery">Доставка</a>
           </li>
           <li class="menu__item">
             <a class="menu__link" routerLink="contact">Свяжитесь с нами</a>
@@ -27,7 +21,9 @@
         <span class="material-icons-outlined"> person </span>
       </button>
       <a routerLink="cart" class="header__cart">
-        <span class="material-icons-outlined" matBadge={{totalItems}}> shopping_cart </span>
+        <span class="material-icons-outlined" matBadge="{{ totalItems }}">
+          shopping_cart
+        </span>
       </a>
     </div>
   </div>

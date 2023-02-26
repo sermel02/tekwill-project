@@ -24,11 +24,17 @@
   }
 
   &__title {
+    display: flex;
+    align-items: center;
     font-weight: 700;
     font-size: 30px;
     line-height: 21px;
     color: #000000;
     margin-bottom: 30px;
+
+    button {
+      margin-left: 20px;
+    }
   }
   // .cart__body
   &__products {

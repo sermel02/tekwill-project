@@ -2,7 +2,7 @@
   <div class="cart__container">
     <div class="cart__title">
       <span>Корзина</span>
-      <button mat-button *ngIf="products.length" (click)="onClearCart()">Очистить корзину <span class="material-icons-outlined"> delete </span></button>
+      <button  mat-stroked-button *ngIf="products.length" (click)="onClearCart()">Очистить корзину <span class="material-icons-outlined"> delete </span></button>
     </div>
     <div class="cart__wrapper">
       <div *ngIf="!products.length; else cart" class="cart-empty">

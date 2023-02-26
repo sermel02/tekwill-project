@@ -1,3 +1,4 @@
+import { DeliveryComponent } from './components/delivery/delivery.component';
 import { OrderComponent } from './components/order/order.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CategoriesComponent } from './components/categories/categories.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'home', component: HomeComponent},
   {path:'categories', component: CategoriesComponent},
   {path:'contact', component: ContactComponent},
+  {path:'delivery', component: DeliveryComponent},
   {path:'order', component: OrderComponent},
   {path:'cart', component: CartComponent},
   {path: 'categories/:categoryId/:productId', component: ProductDetailsComponent},
